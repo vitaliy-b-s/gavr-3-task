@@ -124,12 +124,12 @@ let currnetPosition = 0;
 let specifyCurrentPosition = function(event) {
     event = window.event || event;
     currnetPosition = event.clientX;
+    console.log(currnetPosition);
 };
 let dragNdrop = function(event) {
     let offsetSize = currnetPosition - event.clientX;
-    console.log(offsetSize);
     carusel.style.transform = `translateX(${offsetSize}px`;
 };
 
-carusel.addEventListener("click", specifyCurrentPosition);
-carusel.addEventListener("mousedown", dragNdrop);
+carusel.addEventListener("mousedown", specifyCurrentPosition);
+carusel.addEventListener("mousemove", dragNdrop);
