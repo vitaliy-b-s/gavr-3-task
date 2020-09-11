@@ -575,7 +575,7 @@ body {
     white-space: nowrap;
     margin: 10px 0px 0px 10px;
     font-size: 0;
-    transition-duration: 1s;
+    transition-duration: 0.11s;
 }
 
 .carusel-item {

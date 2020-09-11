@@ -120,6 +120,7 @@ function moveRight() {
 }
 
 let currnetPosition = 0;
+let offsetSize = 0;
 
 let specifyCurrentPosition = function(event) {
     event = window.event || event;
@@ -127,9 +128,20 @@ let specifyCurrentPosition = function(event) {
     console.log(currnetPosition);
 };
 let dragNdrop = function(event) {
-    let offsetSize = currnetPosition - event.clientX;
-    carusel.style.transform = `translateX(${offsetSize}px`;
+    if (currnetPosition !== 0) {
+        if (event.which === 1) {
+            offsetSize = currnetPosition - event.clientX;
+            carusel.style.transform = `translateX(${-offsetSize}px`;
+        }
+    } else {
+        return;
+    }
+};
+
+let renewCurrentPosition = function() {
+    currnetPosition = 0;
 };
 
 carusel.addEventListener("mousedown", specifyCurrentPosition);
 carusel.addEventListener("mousemove", dragNdrop);
+carusel.addEventListener("mouseup", renewCurrentPosition);
