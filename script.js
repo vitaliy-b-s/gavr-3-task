@@ -119,29 +119,27 @@ function moveRight() {
     }
 }
 
-let currnetPosition = 0;
+let currentPosition = 0;
 let offsetSize = 0;
+let currentOffsetSize = 0;
 
 let specifyCurrentPosition = function(event) {
     event = window.event || event;
-    currnetPosition = event.clientX;
-    console.log(currnetPosition);
-};
-let dragNdrop = function(event) {
-    if (currnetPosition !== 0) {
-        if (event.which === 1) {
-            offsetSize = currnetPosition - event.clientX;
-            carusel.style.transform = `translateX(${-offsetSize}px`;
-        }
-    } else {
-        return;
-    }
+    currentPosition = event.clientX;
 };
 
-let renewCurrentPosition = function() {
-    currnetPosition = 0;
+let dragNdrop = function(event) {
+    if (event.which === 1 && currentOffsetSize === 0) {
+        offsetSize = currentPosition - event.clientX;
+        carusel.style.transform = `translateX(${-1 * offsetSize}px)`;
+        currentOffsetSize = -1 * offsetSize;
+        currentPosition = currentPosition + currentOffsetSize;
+    } else if (event.which === 1 && currentOffsetSize !== 0) {
+        carusel.style.transform = `translateX(${currentOffsetSize}px)`;
+        offsetSize = currentOffsetSize + (currentPosition - event.clientX);
+        carusel.style.transform = `translateX(${-1 * offsetSize}px)`;
+    }
 };
 
 carusel.addEventListener("mousedown", specifyCurrentPosition);
 carusel.addEventListener("mousemove", dragNdrop);
-carusel.addEventListener("mouseup", renewCurrentPosition);
