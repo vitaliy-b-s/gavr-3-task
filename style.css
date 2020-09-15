@@ -10,7 +10,7 @@ html {
 body {
   width: 100%;
   margin: 0px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .top-menu {
@@ -48,7 +48,7 @@ body {
 .top-menu-category {
   padding-top: 10px;
   height: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .top-menu-category:hover {
@@ -70,7 +70,7 @@ body {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-top: 0px;
   justify-content: space-around;
   margin: 0px;
@@ -87,7 +87,7 @@ body {
 
 .region-info,
 .city-info {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .city-info {
@@ -136,7 +136,7 @@ body {
 }
 
 .return-call-form::after {
-  content: "";
+  content: '';
   width: 0;
   height: 0;
   position: absolute;
@@ -149,7 +149,7 @@ body {
 
 .return-call-text {
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .return-call-form:hover {
@@ -157,7 +157,7 @@ body {
 }
 
 .main-phone {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 1.4em;
 }
@@ -171,7 +171,7 @@ body {
 }
 
 .contacts-text {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .mail-info {
@@ -193,7 +193,7 @@ body {
   list-style-type: none;
   padding: 0px;
   margin-top: 0px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.1em;
   font-style: italic;
   font-weight: normal;
@@ -226,7 +226,7 @@ body {
   background-color: rgb(240, 234, 234);
   border-radius: 5px;
   color: black;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding-left: 10px;
 }
 
@@ -265,7 +265,7 @@ body {
   width: 100%;
   height: 80px;
   background-color: rgb(240, 234, 234);
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   border-radius: 7px;
 }
 
@@ -302,7 +302,7 @@ body {
   flex-direction: row;
   padding: 0px;
   cursor: pointer;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-top: 5px;
   align-items: center;
   justify-content: center;
@@ -359,7 +359,7 @@ body {
   color: white;
   white-space: normal;
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 10px;
 }
 
@@ -465,7 +465,7 @@ body {
 }
 
 .slider__control::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -474,13 +474,13 @@ body {
 }
 
 .slider__control_left::before {
-  background-image: url("./picture-database/arrow-left.png");
+  background-image: url('./picture-database/arrow-left.png');
   height: 44px;
   width: 16px;
 }
 
 .slider__control_right::before {
-  background-image: url("./picture-database/arrow-right.png");
+  background-image: url('./picture-database/arrow-right.png');
   height: 44px;
   width: 16px;
 }
@@ -600,6 +600,7 @@ body {
   width: 16px;
   height: 44px;
   cursor: pointer;
+  align-self: start;
 }
 
 .product-info-wrapper {
@@ -614,8 +615,8 @@ body {
 }
 
 .product-image {
-  height: 220px;
-  max-width: 230px;
+  height: 200px;
+  max-width: 190px;
 }
 
 .product-title {
@@ -666,4 +667,53 @@ body {
   color: #4673ab;
   font-size: 0.7em;
   padding: 10px 20px;
+}
+.buying-right-now {
+  display: flex;
+  flex-direction: row;
+  width: 1140px;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+.buying-right-now-title {
+  margin: 0px;
+  vertical-align: middle;
+}
+.over-buying-right-now-line {
+  margin-top: 10px;
+  width: 800px;
+  height: 2px;
+}
+.buying-right-now-carusel {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0px;
+  width: 100%;
+}
+.buying-right-now-products {
+  width: 1140px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0px;
+}
+.product-image-new {
+  height: 150px;
+  width: 100px;
+}
+.product-title-new {
+  font-size: 0.8em;
+  text-align: left;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #4673ab;
+}
+.buying-right-now-product {
+  display: flex;
+  flex-direction: column;
 }
