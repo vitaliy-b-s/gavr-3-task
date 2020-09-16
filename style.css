@@ -717,3 +717,92 @@ body {
   display: flex;
   flex-direction: column;
 }
+.last-table {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1140px;
+  margin: auto;
+}
+.disadvantages,
+.advantages {
+  margin-top: 20px;
+  width: 560px;
+  height: 400px;
+  border-radius: 10px;
+}
+.disadvantages {
+  border: #f6bdbf 2px solid;
+}
+.advantages {
+  border: #9bd1a6 2px solid;
+}
+
+.header-disadvantages,
+.header-advantages {
+  background-color: #cb0b13;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: left;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 9px;
+}
+.header-advantages {
+  background-color: #16a333;
+}
+.header-disadvantages {
+  background-color: #cb0b13;
+}
+.advantage-title {
+  font-weight: bold;
+}
+
+.disadvantage,
+.advantage {
+  margin-top: 20px;
+  color: black;
+}
+.variants-of-work-wrapper {
+  width: 1140px;
+  margin: 20px auto;
+}
+.work-btn {
+  height: 45px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background: #dbdee6;
+  color: #ff5816;
+  font-size: 100%;
+  font-weight: 700;
+  border: none;
+  text-decoration: dotted;
+  cursor: pointer;
+  outline: none;
+}
+.work-btn:hover,
+.work-btn:focus {
+  background-color: white;
+  color: black;
+}
+.variants-of-working-carusel {
+  list-style-type: none;
+  padding: 0;
+  transition-duration: 1s;
+  transition-timing-function: ease-in;
+}
+.variants {
+  position: absolute;
+  opacity: 0;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+#variant1 {
+  opacity: 1;
+}

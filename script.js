@@ -155,3 +155,40 @@ let renewLimiter = function () {
 carusel.addEventListener("mousedown", specifyCurrentPosition);
 carusel.addEventListener("mousemove", dragNdrop);
 carusel.addEventListener("mouseup", renewLimiter);
+
+let variants = document.getElementById("variants");
+let variant1 = document.getElementById("variant1");
+let variant2 = document.getElementById("variant2");
+let variant3 = document.getElementById("variant3");
+let variant4 = document.getElementById("variant4");
+
+let changeVariant = function (event) {
+  event = window.event || event;
+  switch (event.target.id) {
+    case "btn-variant1":
+      variant1.style.opacity = 1;
+      variant2.style.opacity = 0;
+      variant3.style.opacity = 0;
+      variant4.style.opacity = 0;
+      break;
+    case "btn-variant2":
+      variant1.style.opacity = 0;
+      variant2.style.opacity = 1;
+      variant3.style.opacity = 0;
+      variant4.style.opacity = 0;
+      break;
+    case "btn-variant3":
+      variant1.style.opacity = 0;
+      variant2.style.opacity = 0;
+      variant3.style.opacity = 1;
+      variant4.style.opacity = 0;
+      break;
+    case "btn-variant4":
+      variant1.style.opacity = 0;
+      variant2.style.opacity = 0;
+      variant3.style.opacity = 0;
+      variant4.style.opacity = 1;
+      break;
+  }
+};
+variants.addEventListener("click", changeVariant);
