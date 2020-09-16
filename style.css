@@ -838,3 +838,15 @@ body {
     max-width: 100%;
     min-width: 1140px;
 }
+
+.footer-info {
+    width: 1140px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer-div {
+    text-align: center;
+}

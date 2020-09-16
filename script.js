@@ -160,9 +160,9 @@ let variant2 = document.getElementById("variant2");
 let variant3 = document.getElementById("variant3");
 let variant4 = document.getElementById("variant4");
 
-let changeVariant = function(e) {
-    e = window.e || e;
-    switch (e.target.id) {
+let changeVariant = function(event) {
+    event = window.event || event;
+    switch (event.target.id) {
         case "btn-variant1":
             variant1.style.opacity = 1;
             variant2.style.opacity = 0;
