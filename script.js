@@ -6,9 +6,7 @@ var multiItemSlider = (function () {
       _sliderItems = _mainElement.querySelectorAll(".slider__item"), // элементы (.slider-item)
       _sliderControls = _mainElement.querySelectorAll(".slider__control"), // элементы управления
       _sliderControlLeft = _mainElement.querySelector(".slider__control_left"), // кнопка "LEFT"
-      _sliderControlRight = _mainElement.querySelector(
-        ".slider__control_right"
-      ), // кнопка "RIGHT"
+      _sliderControlRight = _mainElement.querySelector(".slider__control_right"), // кнопка "RIGHT"
       _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
       _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
       _positionLeftItem = 0, // позиция левого активного элемента
